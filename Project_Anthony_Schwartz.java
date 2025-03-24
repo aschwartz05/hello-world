@@ -8,7 +8,6 @@ public class Project_Anthony_Schwartz {
         ArrayList<Policy> policies = new ArrayList<>(); 
         
         try {
-            
             File file = new File("PolicyInformation.txt");
             Scanner fileScanner = new Scanner(file);
 

@@ -1,3 +1,6 @@
+/**
+ * Represents an insurance policy with various attributes and methods.
+ */
 public class Policy {
     // Attributes
     private int policyNumber;
@@ -9,7 +12,9 @@ public class Policy {
     private int height; // in inches
     private int weight; // in pounds
 
-    // No-arg constructor (default values)
+    /**
+     * No-arg constructor that initializes the Policy object with default values.
+     */
     public Policy() {
         this.policyNumber = 0;
         this.providerName = "Unknown";
@@ -21,7 +26,18 @@ public class Policy {
         this.weight = 0;
     }
 
-    // Constructor with arguments
+    /**
+     * Constructor that initializes a Policy object with the given values.
+     *
+     * @param policyNumber the unique identifier for the policy.
+     * @param providerName the name of the insurance provider.
+     * @param firstName the first name of the policyholder.
+     * @param lastName the last name of the policyholder.
+     * @param age the age of the policyholder.
+     * @param smokingStatus the smoking status of the policyholder (either "smoker" or "non-smoker").
+     * @param height the height of the policyholder in inches.
+     * @param weight the weight of the policyholder in pounds.
+     */
     public Policy(int policyNumber, String providerName, String firstName, String lastName,
                   int age, String smokingStatus, int height, int weight) {
         this.policyNumber = policyNumber;
@@ -54,13 +70,21 @@ public class Policy {
     public void setHeight(int height) { this.height = height; }
     public void setWeight(int weight) { this.weight = weight; }
 
-    // Method to calculate BMI
+    /**
+     * Calculates the Body Mass Index (BMI) of the policyholder.
+     *
+     * @return the calculated BMI.
+     */
     public double calculateBMI() {
         if (height == 0) return 0; // Avoid division by zero
         return (weight * 703.0) / (height * height);
     }
 
-    // Method to calculate policy price
+    /**
+     * Calculates the price of the policy based on several factors: age, smoking status, and BMI.
+     *
+     * @return the total calculated policy price.
+     */
     public double calculatePolicyPrice() {
         final double BASE_FEE = 600;
         double additionalFee = 0;
