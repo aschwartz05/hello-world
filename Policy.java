@@ -76,7 +76,7 @@ public class Policy {
         return BASE_FEE + additionalFee;
     }
     public String toString() {
-        return String.format("Policy Number: %d\nProvider Name: %s\n%s\nPolicy Price: $%.2f\n",
+        return String.format("Policy Number: %d\nProvider Name: %s\n%s\nPolicy Price: $%.2f\n",//added toString
             policyNumber, providerName, policyHolder.toString(), getPolicyPrice()
         );
     }
