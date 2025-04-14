@@ -41,7 +41,7 @@ public class PolicyHolder {
             "Policyholder's First Name: %s\nPolicyholder's Last Name: %s\nPolicyholder's Age: %d\n" +
             "Policyholder's Smoking Status (Y/N): %s\nPolicyholder's Height: %.1f inches\n" +
             "Policyholder's Weight: %.1f pounds\nPolicyholder's BMI: %.2f",
-            firstName, lastName, age, (smoker ? "smoker" : "non-smoker"), height, weight, getBMI()
+            firstName, lastName, age, (smoker ? "smoker" : "non-smoker"), height, weight, getBMI()//added toString
         );
     }
 }
